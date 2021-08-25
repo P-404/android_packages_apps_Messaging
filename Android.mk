@@ -66,6 +66,8 @@ endif
 
 LOCAL_PACKAGE_NAME := messaging
 
+LOCAL_OVERRIDES_PACKAGES := Mms
+
 LOCAL_SDK_VERSION := current
 
 LOCAL_PRODUCT_MODULE := true

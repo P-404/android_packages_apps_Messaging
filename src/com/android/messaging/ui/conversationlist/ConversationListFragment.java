@@ -38,7 +38,7 @@ import android.view.ViewGroup.MarginLayoutParams;
 import android.view.ViewPropertyAnimator;
 import android.view.accessibility.AccessibilityManager;
 import android.widget.AbsListView;
-import android.widget.LinearLayout;
+import android.widget.ImageView;
 
 import com.android.messaging.R;
 import com.android.messaging.annotation.VisibleForAnimation;
@@ -58,6 +58,7 @@ import com.android.messaging.util.ImeUtil;
 import com.android.messaging.util.LogUtil;
 import com.android.messaging.util.UiUtils;
 import com.google.common.annotations.VisibleForTesting;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -90,7 +91,7 @@ public class ConversationListFragment extends Fragment implements ConversationLi
 
     private ConversationListFragmentHost mHost;
     private RecyclerView mRecyclerView;
-    private LinearLayout mStartNewConversationButton;
+    private ExtendedFloatingActionButton mStartNewConversationButton;
     private ListEmptyView mEmptyListMessageView;
     private ConversationListAdapter mAdapter;
 
@@ -218,7 +219,7 @@ public class ConversationListFragment extends Fragment implements ConversationLi
             mListState = savedInstanceState.getParcelable(SAVED_INSTANCE_STATE_LIST_VIEW_STATE_KEY);
         }
 
-        mStartNewConversationButton = (LinearLayout) rootView.findViewById(
+        mStartNewConversationButton = rootView.findViewById(
                 R.id.start_new_conversation_button);
         if (mArchiveMode) {
             mStartNewConversationButton.setVisibility(View.GONE);
